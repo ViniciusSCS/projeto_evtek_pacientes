@@ -29,8 +29,7 @@
                                         </div>
                                     </div>
                                     <div class="col-sm-auto form-group ">
-                                        <select class="form-control" v-model="pagination.state.per_page">
-                                            
+                                        <select class="form-control" v-model="pagination.state.per_page">  
                                             <option value="10">10</option>
                                             <option value="25">25</option>
                                             <option value="100">100</option>
@@ -50,21 +49,9 @@
                                         </th>
 
                                         <th is='sortable' :column="'id'">{{ trans('admin.paciente.columns.id') }}</th>
-                                        <th is='sortable' :column="'cpf'">{{ trans('admin.paciente.columns.cpf') }}</th>
                                         <th is='sortable' :column="'nome'">{{ trans('admin.paciente.columns.nome') }}</th>
-                                        <th is='sortable' :column="'rg'">{{ trans('admin.paciente.columns.rg') }}</th>
-                                        <th is='sortable' :column="'cartao_sus'">{{ trans('admin.paciente.columns.cartao_sus') }}</th>
-                                        <th is='sortable' :column="'sexo'">{{ trans('admin.paciente.columns.sexo') }}</th>
+                                        <th is='sortable' :column="'cpf'">{{ trans('admin.paciente.columns.cpf') }}</th>
                                         <th is='sortable' :column="'data_nascimento'">{{ trans('admin.paciente.columns.data_nascimento') }}</th>
-                                        <th is='sortable' :column="'nome_mae'">{{ trans('admin.paciente.columns.nome_mae') }}</th>
-                                        <th is='sortable' :column="'telefone'">{{ trans('admin.paciente.columns.telefone') }}</th>
-                                        <th is='sortable' :column="'cep'">{{ trans('admin.paciente.columns.cep') }}</th>
-                                        <th is='sortable' :column="'endereco'">{{ trans('admin.paciente.columns.endereco') }}</th>
-                                        <th is='sortable' :column="'numero'">{{ trans('admin.paciente.columns.numero') }}</th>
-                                        <th is='sortable' :column="'complemento'">{{ trans('admin.paciente.columns.complemento') }}</th>
-                                        <th is='sortable' :column="'bairro'">{{ trans('admin.paciente.columns.bairro') }}</th>
-                                        <th is='sortable' :column="'cidade'">{{ trans('admin.paciente.columns.cidade') }}</th>
-                                        <th is='sortable' :column="'uf'">{{ trans('admin.paciente.columns.uf') }}</th>
 
                                         <th></th>
                                     </tr>
@@ -89,22 +76,9 @@
                                         </td>
 
                                     <td>@{{ item.id }}</td>
-                                        <td>@{{ item.cpf }}</td>
                                         <td>@{{ item.nome }}</td>
-                                        <td>@{{ item.rg }}</td>
-                                        <td>@{{ item.cartao_sus }}</td>
-                                        <td>@{{ item.sexo }}</td>
+                                        <td>@{{ item.cpf }}</td>
                                         <td>@{{ item.data_nascimento | date }}</td>
-                                        <td>@{{ item.nome_mae }}</td>
-                                        <td>@{{ item.telefone }}</td>
-                                        <td>@{{ item.cep }}</td>
-                                        <td>@{{ item.endereco }}</td>
-                                        <td>@{{ item.numero }}</td>
-                                        <td>@{{ item.complemento }}</td>
-                                        <td>@{{ item.bairro }}</td>
-                                        <td>@{{ item.cidade }}</td>
-                                        <td>@{{ item.uf }}</td>
-                                        
                                         <td>
                                             <div class="row no-gutters">
                                                 <div class="col-auto">

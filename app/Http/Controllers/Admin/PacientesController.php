@@ -37,7 +37,8 @@ class PacientesController extends Controller
             $request,
 
             // set columns to query
-            ['id', 'cpf', 'nome', 'rg', 'cartao_sus', 'sexo', 'data_nascimento', 'nome_mae', 'telefone', 'cep', 'endereco', 'numero', 'complemento', 'bairro', 'cidade', 'uf'],
+            ['id', 'cpf', 'nome', 'rg', 'cartao_sus', 'sexo', 'data_nascimento', 'nome_mae', 'telefone',
+             'cep', 'endereco', 'numero', 'complemento', 'bairro', 'cidade', 'uf'],
 
             // set columns to searchIn
             ['id', 'cpf', 'nome', 'rg', 'cartao_sus', 'nome_mae', 'telefone', 'cep', 'endereco', 'complemento', 'bairro', 'cidade', 'uf']
@@ -83,7 +84,7 @@ class PacientesController extends Controller
         $paciente = Paciente::create($sanitized);
 
         if ($request->ajax()) {
-            return ['redirect' => url('admin/pacientes'), 'message' => trans('brackets/admin-ui::admin.operation.succeeded')];
+            return ['redirect' => url('admin/pacientes'), 'message' => trans('Paciente Cadastrado com Sucesso!')];
         }
 
         return redirect('admin/pacientes');
